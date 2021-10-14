@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 5000
 
+app.use(express.static('public'))
+
 app.set('view engine', 'ejs')
 
 // Home page
@@ -15,7 +17,7 @@ app.get('/login', (req, res) => {
 })
 
 // Register page
-app.get('/resgister', (req, res) => {
+app.get('/register', (req, res) => {
     res.send('Login')
 })
 
